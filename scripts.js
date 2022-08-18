@@ -56,7 +56,7 @@ function createArray(array) {
     let i = 0;
     
     while (true) {
-    //let i = +prompt('Вводите числа');
+    let i = +prompt('Вводите числа');
     if (i == '') break;
     array.push(i);
     i++;
@@ -79,7 +79,7 @@ showArray();
 //task 5
 console.log('#5'); 
 
-//num5 = +prompt('Введите целое число');
+num5 = +prompt('Введите целое число');
 
 function isEven(num5){
     if (num5 % 2 == 0){
@@ -139,7 +139,7 @@ createPyramid(9);
 console.log('#8');
 
 function createTriangle(h) {
-//h = +prompt('Введите высоту треугольника');
+h = +prompt('Введите высоту треугольника');
  let arr8 = []
  for (let i = 0; i < h; i++){
      let str = '';
@@ -276,13 +276,11 @@ let email;
 function checkEmail(email) {
     var re = /^[a-z]{1}[\w-\.]*@[\w-]+\.[a-z]{2,11}$/i;
 
-    email = 'viccoshe@gmail.com';
-
     var valid = re.test(email);
     if (valid) console.log('Адрес электронной почты введен правильно!');
     else console.log('Адрес электронной почты введен неправильно!');
     return valid;
 }
 
-checkEmail(email);
+checkEmail(prompt('Введите email'));
 
